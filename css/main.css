@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-family: 'Exo 2';
+    color: #231F20;
+	background: #faf8f9;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{ 
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-gap: 10px;
+} 
+.header, .footer{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    letter-spacing: 2px;
+}
+.footer{
+    margin-top: 10px;
+    grid-area: footer;
+    align-content: flex-end;
+    flex-flow: wrap;
+}
+.header h1, .footer h2{
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+.footer p{
+    font-size: 1em;
+    text-align: center;
+}
+.main{
+    position: relative;
+    width: 94%;
+    height: 500px;
+    margin: 0 3%;
+    /* padding: auto; */
+}
+#controls{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+#levels{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EFF7EB;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    /* display: none; */
+}
+#newContinue{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EFF7EB;
+    display: none;
+    /* display: flex; */
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+#settings{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EFF7EB;
+    display: none;
+    /* display: flex; */
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+#highScores{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EFF7EB;
+    display: none;
+    /* display: flex; */
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 1px;
+}
+.score{
+    font-size: 2em;
+    text-align: center;
+}
+.inputsAndLables{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.labels{
+    margin: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+.inputs{
+    /* padding: 10px; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.buttons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+button{
+    background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  width: 300px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+    background:#fff;
+    color:#1AAB8A;
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+}
+button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+.otherButtons{
+    width: 250px;
+    height: 50px;
+    font-size: 1.2em;
+    background-color: #fcab10;
+    margin: 5px;
+}
+.otherButtons:hover{
+    color: #fcab10;
+}
+.otherButtons:before,.otherButtons:after{
+    background-color: #fcab10;
+}
+canvas{
+    background-color:  rgb(157, 231, 145);;
+}
+
+#canvasWrapper{
+    margin: auto;
+}

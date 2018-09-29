@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SNAKE GAME</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Play Snake Game</h1>
+        </header>
+        <main class="main">
+            <div id="canvasWrapper">
+                <!-- <canvas width="400" height="400" id="canvas"></canvas> -->
+            </div>
+            <div id="controls">
+                <div id="levels">
+                    <button id="novice">Novice</button>
+                    <button id="intermediate">Intermediate</button>
+                    <button id="hard">Hard</button>
+                </div>
+                <div id="newContinue">
+                    <button id="new" class="otherButtons">PLAY DEFAULT</button>
+                    <button id="continue" class="otherButtons">CONTINUE WITH YOUR SETTINGS</button>
+                    <button id="customize" class="otherButtons">CUSTOMIZE SETTINGS</button>
+                </div>
+                <div id="settings">
+                    <div class="inputsAndLables">
+                        <div class="labels">
+                            <p>Board Width:</p>
+                            <p>Board Height:</p>
+                            <p>Number of Apples:</p>
+                            <p>Initial Length:</p>
+                            <p>Speed:</p>
+                        </div>
+                        <div class="inputs">
+                            <div>
+                                <span>400</span>
+                                <input type="range" name="boardWidth" id="boardWidth" value="1200" step="1" min="400" max="1200">
+                                <span>1200</span>
+                            </div>
+                            <div>
+                                <span>400</span>
+                                <input type="range" name="boardHeight" id="boardHeight" value="500" step="1" min="400" max="500">
+                                <span>500</span>
+                            </div>
+                            <div>
+                                <span>1</span>
+                                <input type="range" name="NofApples" id="NofApples" value="1" step="1" min="1" max="5">
+                                <span>5</span>
+                            </div>
+                            <div>
+                                <span>1</span>
+                                <input type="range" name="initLength" id="initLength" value="3" step="1" min="3" max="10">
+                                <span>10</span>
+                            </div>
+                            <div>
+                                <span id="minSpeed">1</span>
+                                <input type="range" name="speed" id="speed" value="1" step="0.1" min="1" max="3">
+                                <span id="maxSpeed">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="save" class="otherButtons">SAVE CHANGES</button>
+                        <button id="cancel" class="otherButtons">CANCEL</button>
+                        <button id="start" class="otherButtons">START</button>
+                    </div>
+
+                </div>
+                <div id="highScores">
+                    <p class="score">GAME OVER!</p>
+                    <p class="score">Your Current Score:
+                        <span id="cScore">0</span>
+                    </p>
+                    <p class="score">Your High Score:
+                        <span id="hScore">0</span>
+                    </p>
+                    <button id="tryAgain" class="otherButtons">TRY AGAIN</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <h2>Author</h2>
+            <p>&copy; Tatia Zhodurishvili
+                <br>2018</p>
+        </footer>
+        <script src="js/app.js"></script>
+    </div>
+
+</body>
+
+</html>
